@@ -1,0 +1,19 @@
+type Employee {
+  id: ID!
+  firstName: String
+  lastName: String
+  position: String
+  votes: Int
+  email: String
+  address: String
+  phone: String
+}
+
+type Query {
+  employees: [Employee]
+  employee(id: ID!): Employee
+}
+
+type Mutation {
+  vote(id: ID!): Employee
+}
